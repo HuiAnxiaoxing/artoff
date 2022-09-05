@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>米参测试</title>
+        <script src="js/mican.min.js"></script>
+    </head>
+    <body>
+        <h1>不错哦</h1>
+        <div id="sa" style="height: 50px;width: 50px;"></div>
+        <hr/>
+        <script>
+            let sys={klz:0,xf:33,r:1,g:1,b:1,w:100,jyu:"注意礼貌",pyu:"你是个好人",dou:false}
+            function setty(n,v){
+                sys[n]=v
+                if(n=='r'||n=='g'||n=='b'){
+                    document.getElementById("sa").style.backgroundColor="rgb("+sys.r+","+sys.g+","+sys.b+")"
+                }else if(n=='w'){
+                    document.getElementById("sa").style.width=sys.w+"px"
+                }
+            }
+            function getty(n){
+                return sys[n]
+            }
+            let mianban=[
+                ["快乐值",'klz',LX.prop,0,100],
+                ["红色",'r',LX.prop,0,255],
+                ["绿色",'g',LX.prop,0,255],
+                ["蓝色",'b',LX.prop,0,255],
+                ["宽度",'w',LX.wuxian,1],
+                ["教师寄语",'jyu',LX.wb],
+                ["评语",'pyu',LX.wb],
+                ["是否开启抖动",'dou',LX.bl],
+                ["兴奋",'xf',LX.prop,0,200,1]
+            ]
+            let mianban2=[
+                ["红色",'r',LX.prop,0,255],
+                ["绿色",'g',LX.prop,0,255],
+                ["蓝色",'b',LX.prop,0,255],
+                ["宽度",'w',LX.wuxian,1],
+                ["教师寄语",'jyu',LX.wb],
+                ["评语",'pyu',LX.wb],
+                ["是否开启抖动",'dou',LX.bl]
+            ]
+            let ban1=MiCan(mianban,setty,getty,"测试参数面板")
+            let ban2=MiCan(mianban2,setty,getty,"测试参数面板2")
+            ban2.style.left="150px"
+            ban.style.width='450px'
+        </script>
+    </body>
+</html>
